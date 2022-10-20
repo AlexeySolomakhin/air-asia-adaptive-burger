@@ -653,8 +653,17 @@ button {
 } */
 
 .hot-tours__image-wrapper {
+    position: relative;
     min-height: 144px;
     margin-bottom: 1px;
+}
+
+.hot-tours__image {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hot-tours__content {
@@ -740,6 +749,7 @@ button {
         display: flex;
         flex-wrap: wrap;
         min-width: 160px;
+        margin-bottom: 8px;
     }
     .hot-tours__info-image {
         margin-bottom: 6px;
@@ -749,21 +759,27 @@ button {
     }
     .hot-tours__content {
         padding: 10px 10px;
-        flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         min-height: 144px;
-        max-height: 144px;
     }
     .btn--color--white {
         margin-top: 0;
     }
+    
+    .hot-tours__image {
+        position: initial;
+    }
 }
 
 @media (max-width: 767px) and (min-width: 532px) {
-    .hot-tours__image-wrapper {
-        display: none;
+    .hot-tours__item:nth-child(3) .hot-tours__image {
+        object-position: right;
     }
+    .hot-tours__content {
+        min-width: 300px;
+    }
+
     /* .hot-tours__item {
         flex-wrap: wrap;
         flex-direction: row;
