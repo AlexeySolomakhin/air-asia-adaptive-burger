@@ -1769,7 +1769,7 @@ button {
 }
 
 .review__user:after {
-    content: url(/img/vk-blue-1.png);
+    content: url(./img/vk-blue-1.png);
     height: 26px;
 }
 
